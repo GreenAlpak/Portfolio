@@ -1,0 +1,255 @@
+::root {
+  --m-color:#fff;
+  --s-color:#04b4e0;
+  --b-color:#e4e9eb;
+  --t-color:transparent;
+  --tit-color:#212121;
+  --i-color:#b6b7b8;
+  --sub-color:#878787;
+  --color-text:#5c5c5c;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: var(--b-color);
+  font-family: "Poppins", "Helvetica";
+  font-size: 1.5rem;
+  color: var(--color-text);
+  background-image: url("../img/fondo.png");
+  background-size: 100% 100%;
+  background-repeat: none;
+  background-position: center;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--tit-color);
+}
+
+.layout {
+  position: relative;
+  min-width: 120px;
+  width: 75%;
+  height: 80vh;
+  margin: 10vh auto;
+  display: grid;
+  grid-template-areas: "aside content";
+  grid-template-columns: 30% 70%;
+  border-radius: 4rem;
+  box-shadow: 0px 0px 100px -5px rgba(0, 0, 0, 0.25);
+}
+
+.layout__aside {
+  grid-area: "aside";
+  border-radius: 4rem;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.aside__user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100%;
+  min-width: 30rem;
+  width: 100%;
+  background-color: #04b4e0;
+  color: #fff;
+}
+
+.user-info__img-container {
+  position: relative;
+  display: inline-block;
+  width: 10rem;
+  margin-top: 7rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.user-info__img-container::after {
+  content: "";
+  z-index: -1;
+  border-radius: 10rem;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-repeating-radial-gradient(center, circle, #fff 1px, #fff 1px, transparent 100%);
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  opacity: 0.3;
+}
+
+.user-info__img {
+  background-color: #fff;
+  border: 3px solid #fff;
+  border-radius: 30rem;
+  overflow: hidden;
+}
+
+.user-info__name {
+  margin-top: 2rem;
+  font-size: 3.2rem;
+  color: #fff;
+}
+
+.user-info__job {
+  margin-top: 1rem;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.user-info__links {
+  margin-bottom: 3.6rem;
+}
+
+.user-links__social {
+  margin-top: 2rem;
+  text-align: center;
+  display: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.social__icon {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social__lnk {
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.9rem;
+  line-height: 3rem;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 23rem;
+  transition: all 300ms;
+}
+
+.social__lnk:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.user-info__buttons {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.user-info__btn {
+  margin: 2rem;
+  border: 2px solid #fff;
+  padding: 1.3rem;
+  border-radius: 5rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.user-info__btn:hover {
+  background-color: #fff;
+  color: #04b4e0;
+}
+
+.user-info__footer {
+  position: absolute;
+  bottom: 2rem;
+}
+
+.layout__content {
+  grid-area: "content";
+  height: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 30rem;
+  z-index: 2;
+}
+
+.content__page {
+  background-color: #fff;
+  min-height: 100%;
+  border-radius: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page__name {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.page__job {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #878787;
+}
+
+.layout__nav {
+  display: block;
+  position: absolute;
+  top: 20vh;
+  right: -25vh;
+  opacity: 1;
+  min-width: 11rem;
+  z-index: 3;
+  overflow: visible;
+}
+
+.menu__list {
+  position: relative;
+  background-color: #fff;
+  min-height: 32rem;
+  width: 60%;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu__icon {
+  color: #b6b7b8;
+  font-size: 2.8rem;
+}
+
+.menu__icon:hover {
+  color: #04b4e0;
+}
+
+.menu__itm {
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.menu__overlay {
+  opacity: 0;
+  display: block;
+  color: #fff;
+  background-color: #04b4e0;
+  white-space: nowrap;
+  margin-top: -2.7rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 60px;
+  transition: all 300ms ease-in-out;
+}
+
+.menu__itm:hover .menu__overlay {
+  opacity: 1;
+  right: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

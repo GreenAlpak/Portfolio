@@ -1,0 +1,70 @@
+html(lang="es")
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="../fonts/poppins/poppins.css")
+    link(rel="stylesheet" href="../fonts/fontawesome-free-6.1.2-web/css/all.min.css")
+    link(rel="stylesheet" href="../css/reset.css")
+    link(rel="stylesheet" href="../css/style.css")
+  body
+    // LAYOUT PRINCIPAL
+    div.layout
+      // aside
+      aside.layout__aside
+        section.aside__user-info
+          
+          div.user-info__general
+            div.user-info__img-container
+              img.user-info__img(src="../img/default-user.jpg", alt="foto de perfil de usuario")
+            h2.user-info__name Jose Manuel Claros de la Villa
+            h4.user-info__job Senior Full-Stack Developer
+          
+          nav.layout__nav
+            ul.menu__list
+              li.menu__itm
+                a.menu__lnk(href="../index.html")
+                  i.fa-solid.fa-house.menu__icon
+                  span.menu__overlay HOME
+              li.menu__itm
+                a.menu__lnk(href="../public/me.html")
+                  i.fa-solid.fa-user.menu__icon
+                  span.menu__overlay ABOUT ME
+              li.menu__itm
+                a.menu__lnk(href="../public/academic.html")
+                  i.fa-solid.fa-graduation-cap.menu__icon
+                  span.menu__overlay STUDIES           
+              li.menu__itm
+                a.menu__lnk(href="../public/portfolio.html")
+                  i.fa-solid.fa-briefcase.menu__icon
+                  span.menu__overlay PORTFOLIO 
+              li.menu__itm
+                a.menu__lnk(href="../public/videos.html")
+                  i.fa-solid.fa-tv.menu__icon
+                  span.menu__overlay VIDEOS
+              li.menu__itm
+                a.menu__lnk(href="./contact.html")
+                  i.fa-solid.fa-envelope.menu__icon
+                  span.menu__overlay CONTACT   
+          
+          div.user-info__user-links
+            ul.user-links__social
+              li.social__itm(href="#")
+                a.social__lnk
+                  i.fa-brands.fa-youtube.social__icon
+              li.social__itm(href="#")
+                a.social__lnk
+                  i.fa-brands.fa-linkedin.social__icon
+              li.social__itm(href="#")
+                a.social__lnk
+                  i.fa-brands.fa-instagram.social__icon
+          
+          div.user-info__buttons
+            a.user-info__btn(href="#") Descargar CV
+
+          footer.user-info__footer &copy 2025 Jose Manuel Claros de la Villa
+    
+      // Contenido Principal
+      
+      main.layout__content
+        section.content__page
+          h1.page__name Jose Manuel Claros de la Villa
+          h2.page__job Senior Full-Stack Developer
